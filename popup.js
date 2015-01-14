@@ -1,9 +1,12 @@
 
+var currentUrl = "";
 
-
-
+chrome.tabs.getSelected(function(tab) {
+	var currentUrl = tab.url;
+	$("#domain").text(currentUrl);
+});
 /**
- * 点击插件
+ * 点击事件
  */
 document.addEventListener('DOMContentLoaded', function () {
 
